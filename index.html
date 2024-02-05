@@ -7,52 +7,110 @@
     <title>TK Photography</title>
 </head>
 <body>
-    <header role="banner">
+    <header>
         <h1>TK Photography</h1>
     </header>
 
-    <nav role="navigation">
+    <nav>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#top">Top</a></li>
         </ul>
     </nav>
 
-    <main role="main">
-        <section id="about">
+    <main>
+        <article id="about">
             <h2>About</h2>
-            <p>Hello! I’m TK and I’m a photographer. I love looking at life through the lens of my camera. Landscape photography is my specialty and it’s taken me all over the world.</p>
-        </section>
+            <p>Hello! I’m TK and I’m a photographer. I love looking at life through the lens of my camera. 
+                Landscape photography is my specialty and it’s taken me all over the world.</p>
+        </article>
 
         <section id="gallery">
             <h2>Gallery</h2>
+            <p>Explore my amazing collection of photographs from around the world.</p>
+
             <figure>
                 <img src="Chile.png" alt="Chile">
-                <figcaption>Chile, 2001</figcaption>
+                <figcaption class="bottomCenter-white">CHILE, 2001</figcaption>
             </figure>
-            <!-- Repeat the above structure for other gallery items -->
+            
+            <figure>
+                <img src="Guatemala.png" alt="Guatemala">
+                <figcaption class="topCenter-black">GUATEMALA, 1997</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="Hawaii.png" alt="Hawaii">
+                <figcaption class="bottomCenter-white">HAWAII, 2010</figcaption>
+            </figure>
+
+            <figure>
+                <img src="Iran.png" alt="Iran">
+                <figcaption class="topCenter-black">IRAN, 1999</figcaption>
+            </figure>
+
+            <figure>
+                <img src="Ireland.png" alt="Ireland">
+                <figcaption class="topCenter-black">IRELAND, 2012</figcaption>
+            </figure>
+
+            <figure>
+                <img src="Italy.png" alt="Italy">
+                <figcaption class="bottomCenter-black">ITALY, 2015</figcaption>
+            </figure>
+
+            <figure>
+                <img src="Moab-Desert.png" alt="Moab Desert">
+                <figcaption class="bottomCenter-white">MOAB DESERT, 2020</figcaption>
+            </figure>
+
+            <figure>
+                <img src="Rocky-Mountains.png" alt="Rocky Mountains">
+                <figcaption class="topCenter-black">ROCKY MOUNTAINS, 2009</figcaption>
+            </figure>
+
+            <figure>
+                <img src="Switzerland.png" alt="Switzerland">
+                <figcaption class="topCenter-black">SWITZERLAND, 2014</figcaption>
+            </figure>
+
+            <figure>
+                <img src="UK.png" alt="UK">
+                <figcaption class="topCenter-black">UK, 2005</figcaption>
+            </figure>
+
+            <figure>
+                <img src="USA.png" alt="USA">
+                <figcaption class="topCenter-black">USA, 2021</figcaption>
+            </figure>
+
+            <figure>
+                <img src="Wyoming.png" alt="Wyoming">
+                <figcaption class="topCenter-white">WYOMING, 2021</figcaption>
+            </figure>
+
         </section>
 
-        <section id="contact">
+        <article id="contact">
             <h2>Contact</h2>
-            <form role="form">
-                <label for="name">Name (Your full name)</label>
-                <input type="text" id="name" name="name" required aria-required="true">
+            <p>Please fill out this form and I'll connect with you soon</p>
+            <form>
+                <label for="name">NAME</label>
+                <input type="text" id="name" name="name" placeholder="YOUR FULL NAME" required aria-required="true">
                 
-                <label for="email">Email (Enter your email address)</label>
-                <input type="email" id="email" name="email" required aria-required="true">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" placeholder="ENTER YOUR EMAIL ADDRESS" required aria-required="true">
                 
-                <label for="message">Message (What can I help you with?)</label>
-                <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+                <label for="message">MESSAGE</label>
+                <textarea id="message" name="message" rows="4" placeholder="WHAT CAN I HELP YOU WITH?" required aria-required="true"></textarea>
                 
                 <button type="submit">Submit</button>
             </form>
-        </section>
+        </article>
     </main>
 
-    <footer role="contentinfo">
+    <footer>
         <p>Copyright 2021 TK Photography</p>
     </footer>
 </body>

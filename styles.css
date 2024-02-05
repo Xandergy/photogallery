@@ -3,7 +3,7 @@ html {
 }
 
 header {
-background: #000000;
+background: #ffffff;
 width: 1310px;
 height: 95px;
 }
@@ -27,12 +27,14 @@ h1 {
 
 h2 {
   font-size: 40px;
-  color: #FFFFFF;
+  color: #000000;
   text-transform: uppercase;
 }
 
 p {
   font-size: 20px;
+  color:#000000;
+  text-align: left;
 }
 
 nav {
@@ -47,7 +49,7 @@ nav {
 
 nav li {
   display: inline-block;
-  margin: 40px 40px 20px 40px;
+  margin: 20px 40px 20px 20px;
 }
 
 nav a {
@@ -61,139 +63,98 @@ nav a:hover {
   color: #007D7B
 }
 
-[href="#top"] {
-  position:fixed;
-  bottom:0px;
-  right:0px;
-  width: 80px;
-  height: 40px;
-  background: #007D7B;
-  z-index: 1;
-  text-align: center;
-  padding: 5px;
-}
-
-[href="#top"]:hover {
-  color: #007D7B;
-  background: #FFFFFF;
-}
 
 main {
   clear: both;
 }
 
-.box {
-  background: #FFFFFF;
-  color: #000000;
-  height: auto;
-}
-
-.box h2, .box p {
-  color: #000000;
-  margin: 5px 0px 0px 5px;
-}
-
-img[src*="TK"] {
-  width: 850px;
-  float: left;
-  position: relative;
-  margin: 10px;
-}
-
 #about {
-  width: 420px;
+  width: auto;
   float: right;
   position: relative;
-  text-align: right;
-  margin: 10px;
+  text-align: center;
+  margin: 0;
+  background-color: #ffffff; 
 }
 
 #gallery {
   clear: both;
   position: relative;
-  margin: 10px;
+  margin: 0px;
+  background-color: #ffffff;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-div .container {
-  float: left;
-  width: 420px;
-  position: relative;
-  display: block;
-  margin: 5px;
-  overflow: auto;
+#gallery h2 {
+  width: 100%;
+  text-align: center;
 }
 
-.clear { 
-  clear: both; 
+#gallery p {
+  width: 100%;
+  margin-bottom: 1em;
 }
 
-img {
-  width: 420px;
-}
-
-.smallImage {
-  height: 281px;
-}
-
-.largeImage {
-  height: 630px;
-}
-
-.blackText {
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.whiteText {
-  text-transform: uppercase;
-  color: #FFFFFF;
-}
-
-.topLeft {
-  position: absolute;
-  top: 3px;
-  left: 6px;
-  font-size: 16px;
-}
-
-.bottomRight {
-  position: absolute;
-  bottom: 3px;
-  right: 6px;
-  font-size: 16px;
-}
-
-.bottomLeft {
-  position: absolute;
-  bottom: 3px;
-  left: 6px;
-  font-size: 16px;
+#gallery figure {
+  width: calc(33.33% - 1em);
+  margin-bottom: 1em;
 }
 
 #contact {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 850px;
-}
-
-#contact h2, #contact h2 + p {
+  background-color: #000000;
+  padding: 0em;
+  margin: 0em;
+  margin-right: 0;
   text-align: center;
-  margin: 10px auto auto 5px;
+  color: white;
+  width: 100%;
 }
 
-#contact form {
-  text-align: left;
+form {
+  color: white;
+  display: inline-block;
+  text-align: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+#contact h2 { 
+  color: white;
 }
 
-#contact label, [placeholder] {
-  font-size: 16px;
-  text-transform: uppercase;
+#contact p {
+  color: white;
+  text-align: center;
 }
 
-#contact input {
-  width: 850px;
-  height: 30px;
+
+
+label {
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+  border: 1px solid #007d7b;
+  color: #007d7b;
+}
+
+button {
+  background-color: #007d7b;
+  color: #ffffff;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
 }
 
 [placeholder] {
@@ -222,3 +183,114 @@ button:active {
 footer {
   text-align: center;
 }
+
+@media screen and (max-width: 485px) {
+  main {
+    display: block;
+  }
+
+  #gallery figure {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 486px) and (max-width: 880px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #about,
+  #contact {
+    display: block;
+  }
+
+  #gallery figure {
+    width: calc(50% - 1em);
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (min-width: 881px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+  }
+
+  #gallery figure {
+    width: calc(33.33% - 1em);
+    margin-bottom: 1em;
+  }
+}
+
+
+figure {
+  position: relative;
+  margin-bottom: 1em; 
+}
+
+figcaption {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.0); 
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+figcaption.bottomCenter-white {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; 
+  background: rgba(0, 0, 0, 0.0); 
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+}
+
+figcaption.topCenter-black {
+  position: absolute;
+  top: 9%;
+  left: 50%;
+  color: black;
+  background: rgba(0, 0, 0, 0.0); 
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+}
+
+figcaption.topCenter-white {
+  position: absolute;
+  top: 9%;
+  left: 50%;
+  color: white; 
+  background: rgba(0, 0, 0, 0.0); 
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+}
+
+figcaption.bottomCenter-black {
+  position: absolute;
+  top: 96%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black; 
+  background: rgba(0, 0, 0, 0.0); 
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+}
+
+
